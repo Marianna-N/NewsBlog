@@ -1,0 +1,24 @@
+UserNewsBundle_homepage:
+    path:     /
+    defaults: { _controller: "UserNewsBundle:Page:index" }
+    requirements:
+         methods:  GET
+         
+UserNewsBundle_about:
+    path:     /about
+    defaults: { _controller: "UserNewsBundle:Page:about" }
+    requirements:
+         methods:  GET
+         
+UserNewsBundle_contact:
+    path:     /contact
+    defaults: { _controller: "UserNewsBundle:Page:contact" }
+    requirements:
+         methods:  GET|POST
+         
+UserNewsBundle_blog_show:
+    path:  /{id}
+    defaults: { _controller: "UserNewsBundle:Blog:show" }
+    requirements:
+        methods:  GET
+        id: \d+
